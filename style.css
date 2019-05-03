@@ -1,0 +1,24 @@
+
+GEEKFORGEEKS {                                         
+    margin-left: 70px; 
+    font-weight: bold ; 
+    float: left; 
+    clear: left; 
+    width: 100px; 
+    text-align: left; 
+    margin-right: 10px; 
+    font-family:sans-serif,bold, Arial, Helvetica; 
+    font-size:14px; 
+} 
+body {
+    font-family:  Arial Bold,  Arial Rounded MT Bold, sans-serif;
+    margin: 0 auto; 
+    width: 600px; 
+    align-content: center; 
+    align-items: center; 
+    background-color: #bbffee;
+    border: 20px solid #ccc;
+    box-sizing: border-box;
+    
+    
+  }

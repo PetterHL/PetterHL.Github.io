@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <html lang="nn">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Registreringsskjema</title>
+        <script>
+            function GEEKFORGEEKS() {
+                var name = document.forms["RegForm"]["Navn"];
+                var email = document.forms["RegForm"]["EMail"];
+                var phone = document.forms["RegForm"]["Telefon"];
+                var what = document.forms["RegForm"]["Subject"];
+                var password = document.forms["RegForm"]["gender"];
+                var address = document.forms["RegForm"]["Adresse"];
+
+                if (name.value == "") {
+                    window.alert("Please enter your name.");
+                    name.focus();
+                    return false;
+                }
+
+                if (address.value == "") {
+                    window.alert("Please enter your address.");
+                    name.focus();
+                    return false;
+                }
+
+                if (email.value == "") {
+                    window.alert("Please enter a valid e-mail address.");
+                    email.focus();
+                    return false;
+                }
+
+                if (email.value.indexOf("@", 0) < 0) {
+                    window.alert("Please enter a valid e-mail address.");
+                    email.focus();
+                    return false;
+                }
+
+                if (email.value.indexOf(".", 0) < 0) {
+                    window.alert("Please enter a valid e-mail address.");
+                    email.focus();
+                    return false;
+                }
+
+                if (phone.value == "") {
+                    window.alert("Please enter your telephone number.");
+                    phone.focus();
+                    return false;
+                }
+                if (password.selectedIndex < 1) {
+                    alert("Please enter your course.");
+                    password.focus();
+                    return false;
+                }
+
+                if (what.selectedIndex < 1) {
+                    alert("Please enter your course.");
+                    what.focus();
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </head>
+
+<body>
+    <h1 style="text-align: center"> Registreringsskjema </h1>
+
+    <form name="RegForm" action="/submit.php" onsubmit="return GEEKFORGEEKS()" method="post">
+
+        <p>Navn: <input type="text" size=65 name="Navn"> </p><br>
+        <p> Adresse: <input type="text" size=62 name="Adresse"> </p><br>
+        <p>E-mail Adresse: <input type="text" size=55 name="EMail"> </p><br>
+        
+        <p>Telefon: <input type="text" size=63 name="Telefon"> </p><br>
+
+        <p>Velg ditt fagområdet
+            <select type="text" value="" name="Subject">
+                <option>Dataingeniør</option>
+                <option>Markedsføring</option>
+                <option>Byggingeniør</option>
+                <option>Autmasjon</option>
+                <option>Annet</option>
+            </select></p><br><br>
+
+    <p>
+        Kjønn:<br>
+        <formen action="">
+            <input type="radio" name="gender" value="Mann"> Mann<br>
+            <input type="radio" name="gender" value="Kvinne"> Kvinne<br>
+            <input type="radio" name="gender" value="Andre"> Andre
+        </formen>
+
+        <p>Søknadstekst: <textarea cols="59" name="Comment">  </textarea></p>
+
+        <p><input type="submit" value="send" name="Submit">
+            <input type="reset" value="Reset" name="Reset">
+        </p>
+        </form>
+    </p> 
+</body>
+
+</html>
